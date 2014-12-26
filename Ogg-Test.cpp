@@ -13,8 +13,8 @@
 #else
 #pragma comment ( lib, "libogg_static.lib" )
 #ifndef USE_OGGVORBIS_TREMOR
-//#pragma comment ( lib, "libvorbis_static.lib" )
-//#pragma comment ( lib, "libvorbisfile_static.lib" )
+#pragma comment ( lib, "libvorbis_static.lib" )
+#pragma comment ( lib, "libvorbisfile_static.lib" )
 #else
 #pragma comment (lib, "libtremor.lib")
 #endif

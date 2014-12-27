@@ -20,7 +20,7 @@
 #endif
 #endif
 
-#include "vorbis/vorbisfile.h"
+#include "vorbis/ivorbisfile.h"
 
 #include <windows.h>
 #pragma comment ( lib, "winmm.lib" )
@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
 
 		while (1) {
 			// OggƒŠ[ƒh
-			readSize = ov_read(&ovf, (char*)tmpBuffer, 4096, 0, 2, 1, &bitstream);
+			readSize = ov_read(&ovf, (char*)tmpBuffer, 4096, &bitstream);
 			if (comSize + readSize >= PCMSize || readSize == EOF)
 				break;
 			memcpy(buffer + comSize, tmpBuffer, readSize);
